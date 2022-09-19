@@ -1,0 +1,22 @@
+[
+  {
+    "name": "suzuki",
+    "price": 40000,
+    "thumbnail": "www.suzuki.com"
+  },
+  {
+    "name": "suzuki",
+    "price": 40000,
+    "thumbnail": "www.suzuki.com"
+  },
+  {
+    "name": "honda",
+    "price": 40000,
+    "thumbnail": "www.suzuki.com"
+  },
+  {
+    "name": "yamaha",
+    "price": 40000,
+    "thumbnail": "www.suzuki.com"
+  }
+]
