@@ -23,7 +23,9 @@ class ContenedorMemoria {
     guardar(prod) {
         //POST
         try {
-            this.productos.push({...prod,id: this.id++});
+            this.productos.push({...prod,
+                date: new Date().toLocaleString(),
+                id: this.id++});
         } catch (error) {
             console.error("No se pudo guardar",error);
             return [];

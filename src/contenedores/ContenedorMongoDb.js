@@ -21,7 +21,8 @@ class ContenedorMongoDb {
     }
 
     async guardar(nuevoElem) {
-        const objectSaveModel = new this.coleccion(nuevoElem);
+        console.log(nuevoElem);
+        const objectSaveModel = new this.coleccion({...nuevoElem,date: new Date().toLocaleString()});
         const savedObject = await objectSaveModel.save();
         console.log('Guardo este objeto en mongo', savedObject);
 
@@ -30,7 +31,7 @@ class ContenedorMongoDb {
     async actualizar(obj,id) {
         
         //const object = this.listar(id);
-        const objectUpdate = await this.coleccion.updateOne({_id: id},{ $set: { title: obj.title, price: obj.price, thumbnail: obj.thumbnail}});
+        const objectUpdate = await this.coleccion.updateOne({_id: id},{ $set: {...obj}});
         console.log(objectUpdate);
        
     }

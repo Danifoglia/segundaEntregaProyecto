@@ -6,8 +6,8 @@ class CarritosDaoArchivo extends ContenedorArchivo {
         super('carritos.json')
     }
 
-    async guardar(carrito = { productos: [] }) {
-        return super.guardar(carrito)
+    async guardar(carrito) {
+        return super.guardar({...carrito, productos: []})
     }
 }
 
